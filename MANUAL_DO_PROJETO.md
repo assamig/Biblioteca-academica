@@ -8,7 +8,7 @@ O projeto usa HTML, CSS e JavaScript no navegador, sem framework de aplicação 
 
 ## 2. Acesso e execução
 
-- **Acesso online:** EM ANEXO
+- **Acesso online:** Link disponível na descrição do repositório.
 - **Execução local:** abra `index.html`, localizado na raiz, em um navegador moderno.
 - **Conectividade:** mesmo em execução local, é necessário acesso à internet para obter Semantic UI, jQuery, os ícones e os dados da API Mimicry.
 
