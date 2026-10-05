@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style_index.css">
+    <link rel="stylesheet" href="src/css/style_crud.css">
+    <link rel="stylesheet" href="src/css/style_login.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container-top">
+            <div class="ui segment faixa">
+                <div class="header item-top">Gerencie a sua biblioteca universitária.</div>
+                    <div class="headers item-links">
+                        <a href="src/services_login_interface/signup.html">Não tem uma conta ainda? ➔ Registre-se</a>
+                    </div>
+                    
+                </div>
+                <div class="ui menu">
+                    <i class="fi fi-rs-book-alt"></i>
+                    <div class="header item">Biblioteca Acadêmica</div>
+                    <div class="top-content">
+                        <h1 class="h1-text-top">SEJA BEM VINDO!</h1>
+                    </div>
+                        
+                   <div class="ui toggle checkbox">
+                        <input type="checkbox" name="public">
+                        <label><i class="fi fi-rr-moon"></i></label>
+                    </div>
+                    
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="box-principal-login">
+            <h1>Login</h1>
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Email:
+                </div>
+                <input type="email" placeholder="Digite seu email" id="email">
+            </div>
+
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Senha:
+                </div>
+                <input type="password" placeholder="Digite sua senha" id="password">
+                <div class="olho-show-hide">
+                    <i id="toggle-senha" class="fi fi-rr-eye"></i>
+                </div>
+            </div>
+
+            
+            <a href="src/services_login_interface/forgout.html">Esqueci a minha senha</a>
+            <i id="resultado-login-error" style="color: red;"></i>
+            <button type="button" class="ui teal button login-submit" onclick="FazerLogin()" id="loginButton">ENTRAR</button>
+            
+
+        </div>
+
+            
+        
+    </main>
+    
+    
+   
+
+    <footer>
+        <div class="container bottom">
+            <div class="ui menu">
+                <div class="footer-info"> 
+                    <p>&copy;Meu site. Todos os direitos reservados a Gabriel Henrique da Silva</p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE AVISO QUE APARECE QUANDO SELECIONAR O TIPO DE FILTRO-->
+    <dialog class="modal-login-sucesso" id="modal-login-sucesso">
+        <i id="resultado-modal-sucessoLogin"></i></i>
+    </dialog>
+
+    <dialog class="modal-login-error" id="modal-login-error">
+        <i id="resultado-modal-errorLogin"></i></i>
+    </dialog>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/login.js"></script>
+    <script src="src/js/globalAuth.js" defer></script>
+</body>
+</html>

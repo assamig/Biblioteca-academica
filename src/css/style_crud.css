@@ -1,0 +1,343 @@
+/* Layout das telas de criação, edição e exclusão de livros. */
+.top-content {
+    display: flex;
+    align-items: center;
+    flex: 1
+}
+
+
+.h1-text-top {
+    font-family: 'Blue-Mirage';
+    margin-left: 10px;
+    margin-right: 10px;
+    animation: fadeRight 2s;
+   
+    
+}
+
+.upload.icon {
+    animation: fadeRight 2s;
+    font-size: 26.5px;
+  
+}
+
+
+
+
+.ui.fluid.form {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    display: flex !important;
+    gap: 5px !important;
+    flex: 1 !important;
+    
+}
+
+.save-button {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.h3-save-button {
+    margin-top: 5px;
+}
+
+
+
+.ui.fluid.form .ui.button .save.icon {
+    margin: 5px;
+    font-size: 30px;
+}
+
+.modal-sucesso {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 205, 205), rgba(28, 219, 11, 0.644));
+    animation: fadeIn 2s;
+   
+
+
+}
+.modal-sucesso.fechando {
+    animation: fadeOut 2s;
+}
+
+
+
+.modal-erro {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 205, 205), rgba(243, 61, 16, 0.644));
+    animation: fadeIn 2s;
+}
+.modal-sucesso.erro {
+    animation: fadeOut 2s;
+}
+
+
+.modal-aviso-info-incomplete {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 205, 205), rgba(219, 18, 11, 0.644));
+    animation: fadeIn 4s;
+   
+
+
+}
+.modal-aviso-info-incomplete.fechando {
+    animation: fadeOut 3s;
+}
+
+body.tema-escuro .h3-save-button {
+    color: rgb(255, 255, 255) !important;
+}
+
+.modal-del {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 205, 205), rgba(30, 235, 40, 0.644));
+    animation: fadeIn 2s;
+   
+
+
+}
+.modal-del.fechando {
+    animation: fadeOut 3s;
+}
+
+
+.modal-info-patch-error {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 205, 205), rgba(243, 61, 16, 0.644));
+    animation: fadeIn 2s;
+}
+.modal-info-patch-error.fechando {
+    animation: fadeOut 2s;
+}
+
+
+
+.box-principal-index {
+    background-color: rgba(238, 236, 236, 0.404);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3px;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.box-principal {
+    display: flex;
+    background-color: rgba(238, 236, 236, 0.404);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3px;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Pesquisa e filtros são compartilhados pelas telas de edição e exclusão. */
+.container-pesquisa {
+    display: inline-flex;
+    width: auto;
+    margin-right: 10px;
+    align-items: center;
+    background-color: rgb(187, 187, 187);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    animation: fadeRight 2s;
+}
+
+.ui.menu .ui.dropdown .menu>.item {
+    background: rgba(221, 221, 221, 0.767) !important;
+}
+
+.ui.icon.input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.ui.icon.input > input{
+    width: 100%;
+}
+
+
+
+.modal-filter {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 205, 205), rgba(28, 219, 11, 0.644));
+    animation: fadeIn 2s;
+   
+
+
+}
+.modal-filter.fechando {
+    animation: fadeOut 2s;
+}
+
+
+.error {
+    text-align: center;
+}
+
+
+.ui.inverted.green.small.button.patch-book {
+    display: flex;
+    margin: auto;
+}
+
+.livro-card .livro-info .ui.inverted.red.small.button {
+    display: flex;
+    justify-self: center;
+    position: absolute;
+    bottom: 5px;
+}
+
+/* Organização dos controles de confirmação e formulários exibidos nos modais. */
+.flex-del-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    flex: 1;
+}
+
+.flex-del-buttons p {
+    margin: auto;
+}
+
+
+.del-buttons {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 1px;
+}
+
+.patch-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.ui.fluid.form.patch-modal {
+        width: 300px;
+        max-width: 90%;
+        margin: auto;
+        box-sizing: border-box;
+}
+
+
+.field.patch-modal {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.field.patch-modal input, .field.patch-modal textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+    .container-pesquisa {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    }
+
+}
+
+
+@media (max-width: 960px) {
+    .container-pesquisa {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    }
+
+    .ui.dropdown > .text {
+    max-width: 49px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+}
+
+@media (max-width: 726px) {
+    
+    .top-content {
+        margin-top: 10px;
+    }
+
+      .ui.menu {
+        flex-wrap: wrap;
+    }
+
+    .container-pesquisa {
+        flex-basis: 100% !important;
+        width: 100% !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .ui.dropdown > .text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+}

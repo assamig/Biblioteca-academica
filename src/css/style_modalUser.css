@@ -1,0 +1,128 @@
+/* Perfil e confirmação de logout apresentados nos diálogos da conta. */
+.modal-user-info {
+    margin: auto;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background: rgb(222 211 236);
+}
+
+.ui.fluid.form.user-info-modal {
+    display: flex;
+}
+
+body.tema-escuro .modal-user-info {
+    background: rgb(67 62 72);
+}
+
+
+.ui.fluid.form.user-info-modal {
+    font-style: normal;
+}
+
+
+body.tema-escuro .ui.fluid.form.user-info-modal {
+    color: white;
+}
+
+.ui.fluid.form.user-info-modal .user-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ui.fluid.form.user-info-modal .buttons-logout {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+
+.ui.fluid.form.logout-user {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.ui.fluid.form.logout-user .buttons-logout-confirm{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 726px) {
+    .modal-user-info {
+        width: 35%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 25%
+    }
+}
+
+@media (max-width: 648px) {
+    .modal-user-info {
+        width: 37%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 29%
+    }
+}
+
+@media (max-width: 621px) {
+    .modal-user-info {
+        width: 39%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 29%
+    }
+}
+
+@media (max-width: 582px) {
+    .modal-user-info {
+        width: 40%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 30%
+    }
+}
+
+@media (max-width: 561px) {
+    .modal-user-info {
+        width: 45%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 35%
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-user-info {
+        width: 50%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 40%
+    }
+}
+
+@media (max-width: 450px) {
+    .modal-user-info {
+        width: 65%;
+    }
+
+
+    .modal-confirm-logout {
+        width: 43%
+    }
+}

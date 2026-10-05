@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/style_crud.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_modalUser.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-top">
+            <div class="ui segment faixa">
+                <div class="header item-top">Gerencie a sua biblioteca universitária.</div>
+                    <div class="headers item-links">
+                        <div class="people-icon"><i class="fi fi-rs-user" id="userIcon"></i></div>
+                        <a href="get_index.html">Página inicial</a>
+                        <a href="delete.html">Excluir livro</a>
+                        <a href="patch.html">Atualizar livro</a>
+                    </div>
+                </div>
+                <div class="ui menu">
+                    <i class="fi fi-rs-book-alt"></i>
+                    <div class="header item">Biblioteca Acadêmica</div>
+                    <div class="top-content">
+                        <h1 class="h1-text-top">ADICIONE SEUS LIVROS <i class="upload icon"></i></h1>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="public">
+                        <label><i class="fi fi-rr-moon"></i></label>
+                    </div>
+                    
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="box-principal">
+           <form class="ui fluid form">
+                <div class="field">
+                    <input type="text" placeholder="Título..." id="title">
+                        <div class="ui pointing label">
+                            Digite o título do livro
+                        </div>
+                </div>
+
+                <div class="field">
+                    <input type="text" placeholder="Autor..." id="author">
+                        <div class="ui pointing label">
+                            Digite o nome do autor
+                        </div>
+                </div>
+
+                <div class="field">
+                    <input type="text" placeholder="Gênero..." id="genre">
+                        <div class="ui pointing label">
+                            Digite o gênero do livro
+                        </div>
+                </div>
+
+                <div class="field">
+                    <input type="number" placeholder="Ano..." id="year">
+                        <div class="ui pointing label">
+                            Digite o ano de lançamento
+                        </div>
+                </div>
+
+                <div class="field">
+                    <input type="file" placeholder="Imagem..." accept="image/*" id="image">
+                        <div class="ui pointing label">
+                            Anexe a capa do livro
+                        </div>
+                </div>
+
+                <div class="field">
+                    <textarea placeholder="Sinopse..." id="description" class="input-sinopse"></textarea>
+                        <div class="ui pointing label">
+                            Digite a sinopse do livro
+                        </div>
+                </div>
+
+                <div class="save-button">
+                    <button type="button" class="ui button" onclick="AdicionarLivro()"><i class="save icon"></i></button>
+                    <h3 class="h3-save-button">SALVAR</h3>
+                </div>
+           </form>
+           
+        </div>
+    </main>
+    
+    
+
+    <footer>
+        <div class="container bottom">
+            <div class="ui menu">
+                <div class="footer-info"> 
+                    <p>&copy;Meu site. Todos os direitos reservados a Gabriel Henrique da Silva</p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    
+    <dialog class="modal-sucesso" id="modal-sucesso">
+        <i id="resultado-modal-sucesso"></i></i>
+    </dialog>
+
+    <dialog class="modal-erro" id="modal-erro">
+        <i id="resultado-modal-erro"></i></i>
+    </dialog>
+
+    <dialog class="modal-aviso-info-incomplete" id="modal-aviso-info-incomplete">
+        <i id="resultado-modal-info-incomplete"></i></i>
+    </dialog>
+
+
+    <dialog class="modal-user-info" id="modal-user-info">
+        <i id="resultado-user-info"></i></i>
+    </dialog>
+
+    <dialog class="modal-confirm-logout" id="modal-confirm-logout">
+        <i id="resultado-confirm-logout"></i></i>
+    </dialog>
+    
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/main_crud.js" defer></script>
+    <script src="../js/globalAuth.js" defer></script>
+</body>
+</html>

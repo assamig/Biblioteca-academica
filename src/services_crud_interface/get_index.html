@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/style_index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_modalUser.css">
+</head>
+
+<body onload="FazerRequisicao()">
+    <header>
+        <div class="container-top">
+            <div class="ui segment faixa">
+                <div class="header item-top">Gerencie a sua biblioteca universitária.</div>
+                    <div class="headers item-links">
+                        <div class="people-icon"><i class="fi fi-rs-user" id="userIcon"></i></div>
+                        <a href="create.html">Adicionar livro</a>
+                        <a href="patch.html">Atualizar livro</a>
+                        <a href="delete.html">Excluir livro</a>
+                    </div>
+                </div>
+                <div class="ui menu">
+                    <i class="fi fi-rs-book-alt"></i>
+                    <div class="header item">Biblioteca Acadêmica</div>
+                    <div class="container-pesquisa">
+                        <div class="ui dropdown">
+                            <div class="text">Filtrar</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" id="allSearchFilter" onclick="PegarFiltro(this)">Todas as categorias</div>
+                                <div class="item" id="titleSearchFilter" onclick="PegarFiltro(this)">Titúlo</div>
+                                <div class="item" id="authorSearchFilter" onclick="PegarFiltro(this)">Autor</div>
+                                <div class="item" id="genreSearchFilter" onclick="PegarFiltro(this)">Gênero</div>
+                                <div class="item" id="yearSearchFilter" onclick="PegarFiltro(this)">Ano</div>
+                            </div>
+                        </div>
+                            <div class="ui icon input">
+                                <input type="text" placeholder="Pesquisar..." id="SearchInput">
+                                <i class="inverted circular search link icon" onclick="Pesquisar()"></i>
+                            </div>
+                        
+                    </div>
+                   <div class="ui toggle checkbox">
+                        <input type="checkbox" name="public">
+                        <label><i class="fi fi-rr-moon"></i></label>
+                    </div>
+                    
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="box-principal-index">
+            <i id="erro" style="color: rgb(0, 0, 0);" class="error"><h3>Carregando...</h3></i>
+            <div id="resultado-container"></div>
+        </div>
+
+        
+    </main>
+    
+    
+   
+
+    <footer>
+        <div class="container bottom">
+            <div class="ui menu">
+                <div class="footer-info"> 
+                    <p>&copy;Meu site. Todos os direitos reservados a Gabriel Henrique da Silva</p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE AVISO QUE APARECE QUANDO SELECIONAR O TIPO DE FILTRO-->
+    <dialog class="modal-filter" id="modal">
+        <i id="resultado-modal"></i></i>
+    </dialog>
+
+    <dialog class="modal-info" id="modal-info">
+        <i id="resultado-modal-info"></i></i>
+    </dialog>
+
+    <dialog class="modal-user-info" id="modal-user-info">
+        <i id="resultado-user-info"></i></i>
+    </dialog>
+
+    <dialog class="modal-confirm-logout" id="modal-confirm-logout">
+        <i id="resultado-confirm-logout"></i></i>
+    </dialog>
+
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
+    <script src="../js/script.js"></script>
+    <script src="../js/globalAuth.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_index.css">
+    <link rel="stylesheet" href="../css/style_crud.css">
+    <link rel="stylesheet" href="../css/style_signup.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container-top">
+            <div class="ui segment faixa">
+                <div class="header item-top">Gerencie a sua biblioteca universitária.</div>
+                    <div class="headers item-links">
+                        <a href="../../index.html">Já tem uma conta? ➔ Login</a>
+                    </div>
+                    
+                </div>
+                <div class="ui menu">
+                    <i class="fi fi-rs-book-alt"></i>
+                    <div class="header item">Biblioteca Acadêmica</div>
+                    <div class="top-content">
+                        <h1 class="h1-text-top">SEJA BEM VINDO!</h1>
+                    </div>
+                        
+                   <div class="ui toggle checkbox">
+                        <input type="checkbox" name="public">
+                        <label><i class="fi fi-rr-moon"></i></label>
+                    </div>
+                    
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="box-principal-signup">
+            <h1>Registre-se</h1>
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Nome:
+                </div>
+                <input type="email" placeholder="Digite seu nome" id="first_name">
+            </div>
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Sobrenome:
+                </div>
+                <input type="email" placeholder="Digite seu sobrenome" id="last_name">
+            </div>
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Email:
+                </div>
+                <input type="email" placeholder="Digite seu email" id="email">
+            </div>
+
+            <i id="aviso_email" style="color: red;"></i>
+
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Crie sua senha:
+                </div>
+                <input type="text" placeholder="Digite sua senha" id="password">
+            </div>
+
+
+            <div class="ui labeled input">
+                <div class="ui label">
+                    Confirme a senha:
+                </div>
+                <input type="password" placeholder="Digite sua senha" id="password_again">
+            </div>
+
+            <i id="aviso_senha" style="color: red;"></i>
+
+
+            <button type="submit" class="ui teal button signup-submit" onclick="AdicionarUsuario()">CRIAR CONTA</button>
+            
+        </div>
+
+        
+    </main>
+    
+    
+   
+
+    <footer>
+        <div class="container bottom">
+            <div class="ui menu">
+                <div class="footer-info"> 
+                    <p>&copy;Meu site. Todos os direitos reservados a Gabriel Henrique da Silva</p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE AVISO QUE APARECE QUANDO SELECIONAR O TIPO DE FILTRO-->
+    <dialog class="modal-signup" id="modal-signup">
+        <i id="resultado-modal-signup"></i></i>
+    </dialog>
+
+
+    <dialog class="modal-signup-alert" id="modal-signup-alert">
+        <i id="resultado-modal-signup-alert"></i></i>
+    </dialog>
+
+    <dialog class="modal-signup-error" id="modal-signup-error">
+        <i id="resultado-modal-signup-error"></i></i>
+    </dialog>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
+    <script src="../js/script.js"></script>
+    <script src="../js/signup.js" defer></script>
+    
+</body>
+</html>
