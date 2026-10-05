@@ -4,7 +4,7 @@ Aplicação web didática para gerenciar uma biblioteca pessoal de livros. O sis
 
 ## Como acessar
 
-- **Acesso online:** EM ANEXO
+- **Acesso online:** Disponível na descrição do repositório
 - **Localmente:** abra o arquivo `index.html` na raiz do projeto em um navegador moderno. É necessário estar conectado à internet para carregar as bibliotecas externas e acessar a API.
 
 ## Persistência
